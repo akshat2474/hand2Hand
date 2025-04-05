@@ -195,7 +195,7 @@ dynamic deserializeParam<T>(
       }
       return paramValues
           .whereType<String>()
-          .map((p) => p as String)
+          .map((p) => p)
           .map((p) => deserializeParam<T>(p, paramType, false,
               collectionNamePath: collectionNamePath))
           .where((p) => p != null)
@@ -257,7 +257,7 @@ Future<List<T>> Function(String) getDocList<T>(
     List<String> docIds = [];
     try {
       final ids = json.decode(idsList) as Iterable;
-      docIds = ids.whereType<String>().map((d) => d as String).toList();
+      docIds = ids.whereType<String>().map((d) => d).toList();
     } catch (_) {}
     return Future.wait(
       docIds.map(

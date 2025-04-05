@@ -106,6 +106,7 @@ dependency_overrides:
   uuid: ^4.0.0
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.14.3
   flutter_lints: 4.0.0
   lints: 4.0.0
   flutter_test:
@@ -124,7 +125,19 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/
+    - assets/images/card_backdrop.png
+    - assets/images/image.jpg
+    - assets/images/image1.jpg
+    - assets/images/image2.jpg
+    - assets/images/image3.jpg
+    - assets/images/image_ngo.png
+    - assets/images/money.jpeg
+    - assets/images/app_icon.png
+  
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
     
 
 
